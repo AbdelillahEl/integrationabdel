@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   web:
-    image: odoo:14
+    image: odoo:latest
     depends_on:
       - db
       - rabbitmq
@@ -19,7 +19,7 @@ services:
       - ./addons:/mnt/extra-addons
 
   db:
-    image: postgres:13
+    image: postgres:latest
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=odoo
@@ -51,6 +51,7 @@ services:
       - WORDPRESS_DB_NAME=wordpress
     volumes:
       - ./plugins:/var/www/html/wp-content/plugins
+      - ./themes:/var/www/html/wp-content/themes
 
   wordpress_db:
     image: mysql:5.7

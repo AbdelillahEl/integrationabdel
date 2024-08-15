@@ -2,3 +2,7 @@ plugins/akismet
 plugins/hello.php
 plugins/index.php
 plugins/consumerplugin/vendor
+themes/twenty*
+plugins/twenty*
+addons/
+config/
