@@ -4,5 +4,5 @@ plugins/index.php
 plugins/consumerplugin/vendor
 themes/twenty*
 plugins/twenty*
-addons/
+
 config/

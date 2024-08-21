@@ -1,0 +1,27 @@
+<odoo>
+    <!-- Define the tree view for res.partner -->
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="name">res.partner.tree</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <tree string="Clients">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="wordpress_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Define the action to open the tree view -->
+    <record id="action_partner_list" model="ir.actions.act_window">
+        <field name="name">Client List</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_partner_tree"/>
+    </record>
+
+    <!-- Add the action to the main menu -->
+    <menuitem id="menu_client_list" name="Client List" action="action_partner_list"/>
+
+</odoo>
